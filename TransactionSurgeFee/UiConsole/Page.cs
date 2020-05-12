@@ -58,9 +58,12 @@ namespace TransactionSurgeFee.UiConsole
 
             var amount = ApplyCharges.AmountToPay(Configuration.GetFeeSection,input);
             Console.WriteLine("================================================");
-
-            Console.WriteLine($"  {amount} as been debited");
+            Console.WriteLine("Amount  TransferAmount  Charges   Amount to be Debited  ");
+            Console.WriteLine($"{amount.Amount}       {amount.AdvisedAmount}        {amount.AmountCharge}          {amount.AmountDebited} ");
+            Console.WriteLine($"the transaction amount of {amount.AdvisedAmount} will be model");
+            Console.WriteLine("press any key to continue");
             Console.WriteLine("===============================================");
+            Console.Read();
         }
     }
 }
